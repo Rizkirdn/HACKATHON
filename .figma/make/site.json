@@ -1,0 +1,10 @@
+{
+  "description": "A web application designed around the provided product requirements and workflows, helping users complete key tasks through a clear, purpose-built experience.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

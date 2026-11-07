@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #eef5fc;
+  --color-brand-100: #d9e8f7;
+  --color-brand-500: #2f7cc4;
+  --color-brand-600: #185fa5;
+  --color-brand-700: #124b83;
+  --color-brand-900: #0b2c4d;
+  --color-cream: #faf6ef;
+  --color-ink: #1c2530;
+}
+
+@layer base {
+  body {
+    background: #eef1f5;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 0;
+  }
+}
+
+@keyframes sheet {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.anim-sheet {
+  animation: sheet 0.22s ease-out;
+}
+.anim-fade {
+  animation: fade 0.2s ease-out;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
